@@ -10,7 +10,7 @@ export default function Home() {
             autoPlay
             muted
           >
-            <source src="/images/solo-leveling.mp4" type="video/mp4" />
+            <source src="/videos/solo-leveling.mp4" type="video/mp4" />
           </video>
         </div>
 
