@@ -4,9 +4,6 @@ import Header from '@/components/Header';
 export default function Home() {
   return (
     <div className="flex flex-col min-h-screen bg-gray-900 text-white">
-      {/* Header */}
-      <Header />
-
       {/* Main Content */}
       <main className="flex-1">
         {/* Hero Section */}
@@ -87,10 +84,10 @@ export default function Home() {
           {/* Call to Action */}
           <div className="mt-12 flex justify-center">
             <a
-              href="/explore"
+              href="/build"
               className="px-8 py-3 bg-purple-700 text-white text-lg font-semibold rounded-lg shadow-lg hover:bg-purple-600 transition duration-300"
             >
-              Accéder au Set Builder
+              Accéder aux Builds
             </a>
           </div>
         </div>
