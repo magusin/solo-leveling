@@ -9,8 +9,10 @@ export default function Home() {
             className="absolute top-0 left-0 w-full h-full object-cover"
             autoPlay
             muted
+            controls={false}
+            playsInline
           >
-            <source src="/videos/solo-leveling.mp4" type="video/mp4" />
+            <source src="/videos/Solo-leveling.mp4" type="video/mp4" />
           </video>
         </div>
 
