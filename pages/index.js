@@ -1,27 +1,11 @@
 import Image from 'next/image';
+import Header from '@/components/Header';
 
 export default function Home() {
   return (
     <div className="flex flex-col min-h-screen bg-gray-900 text-white">
       {/* Header */}
-      <header className="bg-gray-800 py-4 shadow-md">
-        <div className="container mx-auto flex items-center justify-between px-6">
-          {/* Logo */}
-          <a href="/" className="text-2xl font-bold text-white">
-            SoloLeveling<span className="text-purple-500">SetBuilder</span>
-          </a>
-
-          {/* Navigation */}
-          <nav className="flex space-x-6">
-            <a
-              href="/explore"
-              className="text-white hover:text-purple-400 transition duration-200"
-            >
-              Explorer les sets
-            </a>
-          </nav>
-        </div>
-      </header>
+      <Header />
 
       {/* Main Content */}
       <main className="flex-1">
@@ -40,7 +24,7 @@ export default function Home() {
         <div className="relative py-16 px-6 bg-gray-900">
           {/* Decorative Gradient */}
           <div className="absolute -top-3 left-0 w-full h-10 bg-gradient-to-b from-gray-900 to-transparent transform skew-y-3 z-0" />
-
+          <div className="absolute -top-3 left-0 w-full h-10 bg-gradient-to-b from-gray-900 to-transparent transform skew-y-1 z-0" />
           <h1 className="text-5xl text-center font-extrabold mb-4 text-purple-500 z-10 relative">
             Solo Leveling: Builder
           </h1>
