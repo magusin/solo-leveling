@@ -6,7 +6,7 @@ export default function Header() {
         <div className="container mx-auto flex items-center justify-between px-6">
           {/* Logo */}
           <Link href="/" className="text-2xl font-bold text-white">
-            SoloLeveling<span className="text-purple-500">SetBuilder</span>
+            SoloLeveling<span className="text-purple-500">Builder</span>
           </Link>
   
           {/* Navigation */}

@@ -34,3 +34,48 @@ model EmailConfirmation {
 
   user User @relation(fields: [userId], references: [id])
 }
+
+model Build {
+  id          Int       @id @default(autoincrement())
+  characterId Int
+  character   Character  @relation(fields: [characterId], references: [id])
+  title       String
+  description String
+  author      String
+  items       Json      // Liste des 8 items avec leurs stats
+  createdAt   DateTime  @default(now())
+}
+
+model ItemSet {
+  id          Int       @id @default(autoincrement())
+  name        String    @unique
+  description1 String    // Bonus pour 2 items
+  description2 String    // Bonus pour 4 items
+  description3 String    // Bonus pour 8 items
+  items       Item[]    // Items appartenant à cet ensemble
+}
+
+model ItemType {
+  id              Int       @id @default(autoincrement())
+  name            String    @unique
+  primaryStats    String[]  // Statistiques principales possibles pour ce type
+  secondaryStats  String[]  // Statistiques secondaires possibles pour ce type
+  items           Item[]    // Relation avec les items
+}
+
+model Item {
+  id          Int       @id @default(autoincrement())
+  name        String
+  image       String    // URL de l'image de l'item
+  typeId      Int       // Relation avec ItemType
+  type        ItemType  @relation(fields: [typeId], references: [id])
+  itemSetId   Int       // Relation avec ItemSet
+  itemSet     ItemSet   @relation(fields: [itemSetId], references: [id])
+}
+
+model Character {
+  id        Int      @id @default(autoincrement())
+  name      String   @unique
+  image     String   // URL de l'image du personnage
+  builds    Build[]  // Relation avec les builds
+}
